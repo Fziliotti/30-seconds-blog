@@ -63,8 +63,7 @@ const filePaths = files.reduce((acc, file) => {
 ```js
 const files = [ 'foo.txt ', '.bar', '   ', 'baz.foo' ];
 const filePaths = files
-  .map(file => file.trim())
-  .filter(Boolean)
+  .filter(file => Boolean(file.trim()))
   .map(fileName => `~/cool_app/${fileName}`);
 
 // filePaths = [ '~/cool_app/foo.txt', '~/cool_app/.bar', '~/cool_app/baz.foo']
